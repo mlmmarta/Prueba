@@ -1,0 +1,91 @@
+<html>
+    <head>
+    <title>Ejemplo de formulario</title>
+    <link rel="stylesheet" type="text/css" href="estilo.css"/>
+    
+    </head>
+<body>
+    <h3>Formulario</h3>
+    25
+    <h3>Formulario</h3>
+        <form action="http://www.google.com" method="get" enctype="application/x-www-form-urlencoded accept="">
+            Escribe tu nombre:
+            <input type="text" name="nombre" value="pruebanombre" />
+            <br/>
+            Edad:<input type="text" name="edad" value="pruebaedad" />
+            <br/>
+            Password:<input type="password" name="password" value="pruebaedad" />
+            <br/>
+            Elija un color: 
+            <select name="colorfavorito">        
+                <option value="1" selected>Verde</option>
+                <option value="2">Rojo</option>
+                <option value="3">Azul</option>
+                <option value="4">Amarillo</option>
+            </select>
+            <br/>
+            Escriba aquí:
+            <textarea rows="4" cols="50" placeholder="Describe yourself here..."></textarea>
+            <br/>
+
+            <select>
+                <optgroup label="Primer grupo">
+                <option value="uno">Un</option>
+                <option value="dos">Dos</option>
+                <option value="dos">Dos</option>
+                <option value="tres">Tres</option>
+                </optgroup>
+                <optgroup label="Segundo grupo">
+                <option value="cuatro">Cuatro</option>
+                <option value="cinco">Cinco</option>
+                <option value="seis">Seis</option>
+                </optgroup>
+            </select>
+<!--gracias al atributo name="color" en todos los radios solo podrá haber uno
+seleccionado al mismo tiempo-->
+<fieldset>
+    <legend>Elige color</legend>
+    <ul>
+        <li>
+        <label for="color-red">Rojo</label>
+        <input type="radio" id="color-red" name="color" value="red" checked>
+        </li>
+        <li>
+        <label for="color-blue">Azul</label>
+        <input type="radio" id="peas" name="color" value="blue">
+        </li>
+    <li>
+    <label for="color-green">Verde</label>
+    <input type="radio" id="color-green" name="color" value="green">
+    </li>
+    </ul>
+    </fieldset>
+    <!-- el primer checkbox aparecerá seleccionado por defecto -->
+    <label for="privacy-email">Acepto recibir noticias y/o ofertas por email</label>
+    <input type="checkbox" id="privacy-email" checked name="privacy-email">
+    <label for="privacy">Acepto las condiciones legales</label>
+    <input type="checkbox" id="privacy" name="privacy">
+<!-- gracias al atributo accept se limita la extensión del fichero -->
+<div>
+    <label for="cv">Añade tu currículum</label>
+    <input type="file" id="cv" name="cv" accept=".pdf,.doc">
+</div>
+<!-- gracias al atributo multiple se pueden subir una o varias fotos -->
+<div>
+    <label for="images">Añade una o varias fotos tuyas</label>
+    <input type="file" id="images" name="images" accept="image/*" multiple>
+</div>
+
+<label for="country">Selecciona un país:</label>
+<input list="browsers" name="country" id="country" />
+<datalist id="browsers">
+    <option value="España">
+    <option value="Portugal">
+    <option value="Francia">
+    <option value="Alemania">
+</datalist>
+
+            <input type="submit" value="Enviar" />
+        </form>
+</body>
+</html>
